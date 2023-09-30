@@ -1,4 +1,5 @@
-const randomizer = require('./tools');
+const {randomizer, getArr} = require('./tools');
+
 
 describe('Проверка функции randomizer', () => {
     it('Генерирует число от 10 до 80, включая их', () => {
@@ -10,6 +11,13 @@ describe('Проверка функции randomizer', () => {
     it('диапазон', () => {
         expect(randomizer()).toBeGreaterThanOrEqual(10);
         expect(randomizer()).toBeLessThanOrEqual(80);
+    });
+}); 
+
+describe('Проверка функции getArr', () => {
+    it('Проверяет наличие цифры', () => {
+        expect(getArr()[0]).toBeGreaterThanOrEqual(5);
+        expect(getArr()[0]).toBeLessThanOrEqual(10);
     });
 }); 
 

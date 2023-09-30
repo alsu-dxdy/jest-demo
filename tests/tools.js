@@ -7,7 +7,7 @@ module.exports.randomizer = () => {
 /**
  * Учитывая список целых чисел, найдите ближайшее к нулю. Если есть ничья, выберите положительное значение.
  */
-module.exports.getArr = (arr) => {
+module.exports.getClosestZero = (arr) => {
   return arr.map(x => Math.abs(x))
             .sort((a,b) => a - b)[0]
 }

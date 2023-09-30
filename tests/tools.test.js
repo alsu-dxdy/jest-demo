@@ -1,4 +1,4 @@
-const {randomizer, getArr} = require('./tools');
+const {randomizer, getClosestZero} = require('./tools');
 
 
 describe('Проверка функции randomizer', () => {
@@ -14,15 +14,15 @@ describe('Проверка функции randomizer', () => {
     });
 }); 
 
-describe('Проверка функции getArr', () => {
+describe('Проверка функции getClosestZero', () => {
     it('Проверяет число в массиве, ближайшее к нулю', () => {
-        expect(getArr([1])).toBe(1);
-        expect(getArr([1, 2])).toBe(1);
-        expect(getArr([2, 3])).toBe(2);
-        expect(getArr([3, 2])).toBe(2);
-        expect(getArr([-1, 1])).toBe(1);
-        expect(getArr([-1, 0, 1])).toBe(0);
-        expect(getArr([-4, -4, 4, -3, 3, 3])).toBe(3);
+        expect(getClosestZero([1])).toBe(1);
+        expect(getClosestZero([1, 2])).toBe(1);
+        expect(getClosestZero([2, 3])).toBe(2);
+        expect(getClosestZero([3, 2])).toBe(2);
+        expect(getClosestZero([-1, 1])).toBe(1);
+        expect(getClosestZero([-1, 0, 1])).toBe(0);
+        expect(getClosestZero([-4, -4, 4, -3, 3, 3])).toBe(3);
     });
 }); 
 

@@ -15,9 +15,14 @@ describe('Проверка функции randomizer', () => {
 }); 
 
 describe('Проверка функции getArr', () => {
-    it('Проверяет наличие цифры', () => {
-        expect(getArr()[0]).toBeGreaterThanOrEqual(5);
-        expect(getArr()[0]).toBeLessThanOrEqual(10);
+    it('Проверяет число в массиве, ближайшее к нулю', () => {
+        expect(getArr([1])).toBe(1);
+        expect(getArr([1, 2])).toBe(1);
+        expect(getArr([2, 3])).toBe(2);
+        expect(getArr([3, 2])).toBe(2);
+        expect(getArr([-1, 1])).toBe(1);
+        expect(getArr([-1, 0, 1])).toBe(0);
+        expect(getArr([-4, -4, 4, -3, 3, 3])).toBe(3);
     });
 }); 
 

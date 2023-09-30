@@ -8,10 +8,10 @@ describe('Проверка функции randomizer', () => {
         expect(randomizer()).toBeLessThanOrEqual(80);
     });
     
-    it('диапазон', () => {
-        expect(randomizer()).toBeGreaterThanOrEqual(10);
-        expect(randomizer()).toBeLessThanOrEqual(80);
-    });
+    // it('диапазон', () => {
+    //     expect(randomizer()).toBeGreaterThanOrEqual(10);
+    //     expect(randomizer()).toBeLessThanOrEqual(80);
+    // });
 }); 
 
 describe('Проверка функции getClosestZero', () => {

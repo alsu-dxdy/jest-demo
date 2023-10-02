@@ -16,6 +16,7 @@ describe('Проверка функции randomizer', () => {
 
 describe('Проверка функции getClosestZero', () => {
     it('Проверяет число в массиве, ближайшее к нулю', () => {
+        expect(getClosestZero([])).toBe(0);
         expect(getClosestZero([1])).toBe(1);
         expect(getClosestZero([1, 2])).toBe(1);
         expect(getClosestZero([2, 3])).toBe(2);
